@@ -612,7 +612,7 @@ https://www.zcfy.cc/article/the-inner-workings-of-virtual-dom-rajaraodv-medium-3
 
 ## 4.2 CSS in React
 
-### 4.2.1 当前解决方案
+### 当前解决方案
 
 - 不再使用CSS，以JS的方式去写CSS。为CSS提供了强大的模块化能力，但无法使用当前成熟的CSS预处理其（less/sass）
 - 依然使用CSS，但使用JS管理CSS的依赖关系。能够较好的结合当前成熟的CSS生态和模块能力
@@ -650,8 +650,8 @@ https://www.zcfy.cc/article/the-inner-workings-of-virtual-dom-rajaraodv-medium-3
 
 ## 4.4 React生态
 
-### 4.4.1 redux
-### 4.4.2 react-loadable
+### redux
+### react-loadable
 
 # 5. Webpack
 
