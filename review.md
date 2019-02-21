@@ -659,9 +659,9 @@ https://www.zcfy.cc/article/the-inner-workings-of-virtual-dom-rajaraodv-medium-3
 
 # 5. Webpack
 
-## 代码分割
+## [代码分割](https://webpack.js.org/guides/code-splitting/)
 
-### [多入口](https://webpack.js.org/guides/code-splitting/)
+### 多入口
 
 问题：
 
