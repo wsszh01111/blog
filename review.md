@@ -95,7 +95,7 @@ Ref:
 
 ### JS中的相等比较
 
-#### ===和Object.is
+#### ===和Object.is(ES6)
 
 **===** 不会进行类型转换，只有值和值类型都相等时才返回true，极为具体的详情可参考[规范7.2.13](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-equality-comparison)
 
