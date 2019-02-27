@@ -608,7 +608,10 @@ await async2;
 
 ## 4.1 Virtual DOM
 
-https://www.zcfy.cc/article/the-inner-workings-of-virtual-dom-rajaraodv-medium-3248.html
+Ref：
+
+1. [深度剖析：如何实现一个 Virtual DOM 算法 | Github](https://github.com/livoras/blog/issues/13)
+2. [虚拟 DOM 内部是如何工作的？ | 众成翻译](https://www.zcfy.cc/article/the-inner-workings-of-virtual-dom-rajaraodv-medium-3248.html)
 
 ## 4.2 CSS in React
 
