@@ -93,7 +93,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collection
 Ref: 
 1. [javascript数组中数字和非数字下标的区别](https://www.cnblogs.com/ZJAJS/archive/2013/01/19/2867847.html)
 
-### JS中的相等比较
+### JavaScript中的相等性判断
 
 #### ===和Object.is(ES6)
 
@@ -127,15 +127,15 @@ Object.is(NaN, NaN) //true Object.is中NaN等于其自身
 
 如下是A==B的运算结果
 
-| 比较      | Undefined      | Null           | Number            | String            | Boolean        | Object             | Symbol            |
-| --------- | -------------- | -------------- | ----------------- | ----------------- | -------------- | ------------------ | ----------------- |
-| Undefined | A===B          | true           | false             | false             | A==ToNumber(B) | false              | false             |
-| Null      | true           | A===B          | false             | false             | A==ToNumber(B) | false              | false             |
-| Number    | false          | false          | A===B             | A==ToNumber(B)    | A==ToNumber(B) | A==ToPrimitive(B)  | false             |
-| String    | false          | false          | ToNumber(A)==B    | A===B             | A==ToNumber(B) | A===ToPrimitive(B) | false             |
-| Boolean   | ToNumber(A)==B | ToNumber(A)==B | ToNumber(A)==B    | ToNumber(A)==B    | A===B          | ToNumber(A)==B     | ToNumber(A)==B    |
-| Object    | false          | false          | ToPrimitive(A)==B | ToPrimitive(A)==B | A==ToNumber(B) | A===B              | ToPrimitive(A)==B |
-| Symbol    | false          | false          | false             | false             | A==ToNumber(B) | A==ToPrimitive(B)  | A===B             |
+| 比较      | Undefined | Null  | Number            | String                    | Boolean        | Object                      | Symbol            |
+| --------- | --------- | ----- | ----------------- | ------------------------- | -------------- | --------------------------- | ----------------- |
+| Undefined | A===B     | true  | false             | false                     | false          | IsFalsy(B)                  | false             |
+| Null      | true      | A===B | false             | false                     | false          | IsFalsy(B)                  | false             |
+| Number    | false     | false | A===B             | A===ToNumber(B)           | A==ToNumber(B) | A===ToPrimitive(B)          | false             |
+| String    | false     | false | ToNumber(A)===B   | A===B                     | A==ToNumber(B) | A==ToPrimitive(B)           | false             |
+| Boolean   | false     | false | ToNumber(A)===B   | ToNumber(A)===ToNumber(B) | A===B          | ToNumber(A)==ToPrimitive(B) | ToNumber(A)==B    |
+| Object    | false     | false | ToPrimitive(A)==B | ToPrimitive(A)==B         | A==ToNumber(B) | A===B                       | ToPrimitive(A)==B |
+| Symbol    | false     | false | false             | false                     | A==ToNumber(B) | A==ToPrimitive(B)           | A===B             |
 
 这么记，同类型用===判断，undefined和null比较为true，Number和String比较用ToNumber，Boolean和其他比较用ToNumber，String、Number、Symbol和Object比较用ToPrimitive。
 
