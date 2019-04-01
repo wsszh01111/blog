@@ -126,6 +126,8 @@ module.exports = {
 ]
 ```
 
+JSPrettier检测到项目中的Prettier配置文件时，[会直接使用配置文件](https://github.com/jonlabelle/SublimeJsPrettier#prettier-configuration-files)，但除了`parser`、`tabWidth`和`useTabs`，注意其中的`parser`，是会覆盖Prettier配置中的`parser`选项，而不是ESLint中的`parser`配置选项
+
 # 自动化
 
 # CLI
