@@ -12,6 +12,8 @@
 
 # [整合ESLint和Prettier](https://prettier.io/docs/en/eslint.html)
 
+整合Prettier主要是两步：关闭Linter中和Prettier冲突的规则，将Prettier提供的插件作为扩展加入到Linter中
+
 使用[eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)和[eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)配置ESLint，eslint-plugin-prettier主要是可以让ESLint使用Prettier的语法检查规则，eslint-config-prettier则关闭了可能Prettier发生冲突的ESLint自带的一些语法检查规则（eslint-config-prettier本质上关闭了一些在rules字段中配置的参数Note that this config *only* turns rules *off,* so it only makes sense using it together with some other config.）
 
 eslint-plugin-prettier还提供一种简单的配置方式用来整合了使用Prettier语法检查规则和关闭ESLint冲突规则这两件事，即
